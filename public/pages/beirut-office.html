@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beirut Office | JMC Group</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .office-hero { position: relative; width: 100%; height: 340px; margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(97,137,47,0.12); }
+    .office-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+    .office-location { position: absolute; bottom: 20px; right: 30px; left: auto; color: var(--accent-white); background: rgba(134,194,50,0.85); padding: 0.5rem 1.5rem; border-radius: 8px; font-size: 1.7rem; font-weight: 600; letter-spacing: 1px; text-align: right; }
+    .office-culture, .office-desc { margin-bottom: 1.2rem; color: var(--accent-white); }
+    .office-cards { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .office-card { flex: 1 1 300px; background: var(--gray-light); border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(97,137,47,0.06); min-width: 260px; }
+    .office-card h4 { color: var(--accent-lime); font-weight: 700; margin-bottom: 0.7rem; }
+    .office-card a { text-decoration: none; color: var(--accent-lime); }
+    .office-partners { display: flex; gap: 1.5rem; margin-top: 1.5rem; justify-content: flex-start; }
+    .partner-placeholder { width: 90px; height: 90px; background: var(--gray-medium); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--accent-lime); font-weight: 600; flex-direction: column; box-shadow: 0 1px 4px rgba(97,137,47,0.08); }
+    @media (max-width: 900px) { .office-cards { flex-direction: column; } }
+    body { padding-top: 80px !important; background: var(--background-dark); }
+    .footer.fixed-bottom { position: static !important; }
+    .office-desc, .office-culture, .office-card p { color: var(--accent-white); }
+    .office-contact-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); border-radius: 12px; padding: 1.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar (appears on scroll up) -->
+  <nav class="navbar navbar-expand-lg top-navbar" id="topNavbar" style="height:40px;">
+    <div class="container">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="offices.html">Offices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="subscribe.html">Subscribe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main Navigation Bar (always visible) -->
+  <nav class="navbar navbar-expand-lg main-navbar" id="mainNavbar" style="position:fixed;top:0;left:0;right:0;z-index:1040;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="JMC Group Logo" style="height:32px;width:auto;vertical-align:middle;margin-right:8px;">JMC Group</a>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="industries.html">Industries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consulting-services.html">Consulting Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="careers.html">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4">
+    <h1 class="mb-4" style="color:#86C232;">Beirut Office</h1>
+    <div class="office-hero">
+      <img src="../assets/beirut.jpg" alt="Beirut Office">
+      <div class="office-contact-block office-contact-overlay">
+        <h2>Middle East Office</h2>
+        <p>789 Business District, Beirut, Lebanon</p>
+        <p>+961 1 234 567</p>
+      </div>
+      <div class="office-location">Beirut, Lebanon</div>
+    </div>
+    <div class="office-desc">Strategically located in Beirut, our office bridges the Middle East and global markets, driving innovation and growth.</div>
+    <div class="office-culture"><strong>Our Culture:</strong> We value resilience, creativity, and a strong sense of community, empowering our team to excel.</div>
+    <div class="office-cards">
+      <div class="office-card">
+        <h4><a href="careers.html" style="color:inherit;text-decoration:none;">Build your own career</a></h4>
+        <p>Be part of a dynamic team in Beirut, where your ambitions are supported and your impact is real.</p>
+      </div>
+      <div class="office-card">
+        <h4>Connectivity</h4>
+        <p>Our Beirut office is a nexus for regional and international collaboration, fostering strong professional networks.</p>
+      </div>
+      <div class="office-card">
+        <h4>Social Impact</h4>
+        <p>We are passionate about making a difference, supporting local causes and driving positive change in Lebanon.</p>
+      </div>
+    </div>
+    <section class="office-partners">
+      <div class="partner-profile">
+        <img src="../assets/Elie Farhat.png" alt="Elie Farhat" class="partner-photo">
+        <div class="partner-name">Elie Farhat</div>
+        <div class="partner-title">Partner</div>
+      </div>
+      <div class="partner-profile">
+        <img src="../assets/Ryan Zaylaa.png" alt="Ryan Zaylaa" class="partner-photo">
+        <div class="partner-name">Ryan Zaylaa</div>
+        <div class="partner-title">Partner</div>
+      </div>
+      <div class="partner-profile">
+        <img src="../assets/Elias Zaghrini.png" alt="Elias Zaghrini" class="partner-photo">
+        <div class="partner-name">Elias Zaghrini</div>
+        <div class="partner-title">Partner</div>
+      </div>
+    </section>
+  </div>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="text-white">JMC Group</h5>
+          <p>Delivering exceptional consulting services worldwide.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="footer-links mb-3">
+            <a href="contact.html" class="text-light me-3" style="text-decoration:none;">Contact</a>
+            <a href="subscribe.html" class="text-light" style="text-decoration:none;">Subscribe</a>
+          </div>
+          <p>&copy; 2025 JMC Group. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="../js/navigation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html> 

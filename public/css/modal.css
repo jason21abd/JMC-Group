@@ -1,0 +1,32 @@
+/* modal.css - Modal Popup Styles */
+
+.modal-content {
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.15);
+  border: 2px solid var(--primary-purple);
+}
+.modal-header {
+  background: var(--primary-purple);
+  color: var(--accent-white);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.modal-title {
+  font-weight: 700;
+}
+.btn-close {
+  filter: invert(1);
+}
+.modal-footer {
+  background: var(--accent-gray);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+#subscribeForm .form-label {
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+#subscribeForm .form-control:focus, #subscribeForm .form-select:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 0.2rem rgba(124,58,237,0.15);
+} 

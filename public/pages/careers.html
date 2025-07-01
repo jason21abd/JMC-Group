@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | JMC Group</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .career-card { background: var(--gray-light); border-radius: 10px; box-shadow: 0 2px 8px rgba(97,137,47,0.06); padding: 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .career-info { flex: 1; color: var(--accent-white); }
+    .career-title { font-size: 1.3rem; font-weight: 700; color: var(--accent-lime); margin-bottom: 0.3rem; }
+    .career-desc { margin-bottom: 0; color: var(--accent-white); }
+    .apply-btn { min-width: 120px; }
+    @media (max-width: 700px) { .career-card { flex-direction: column; align-items: flex-start; } .apply-btn { width: 100%; margin-top: 1rem; } }
+    body { padding-top: 80px !important; background: var(--background-dark); }
+    .footer.fixed-bottom { position: static !important; }
+    .lead { color: var(--accent-white); }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar (appears on scroll up) -->
+  <nav class="navbar navbar-expand-lg top-navbar" id="topNavbar">
+    <div class="container">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="offices.html">Offices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="subscribe.html">Subscribe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main Navigation Bar (always visible) -->
+  <nav class="navbar navbar-expand-lg main-navbar" id="mainNavbar" style="position:fixed;top:0;left:0;right:0;z-index:1040;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="JMC Group Logo" style="height:32px;width:auto;vertical-align:middle;margin-right:8px;">JMC Group</a>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="industries.html">Industries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consulting-services.html">Consulting Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="careers.html">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <h1 class="mb-4">Careers at JMC Group</h1>
+    <p class="lead mb-5">What are you striving towards? Whether you plan to work in consulting, marketing, sustainability, technology, or something else, we'll bet there's a way you can do it here. Apply your skills alongside uniquely talented people in an environment where you'll be supported along the way.</p>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Management Consulting</div>
+        <div class="career-desc">Advise leading organizations on strategy, operations, and transformation to drive impactful results.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Management Consulting">Apply</button>
+    </div>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Analytics, Data & Research</div>
+        <div class="career-desc">Leverage data and research to deliver actionable insights and support evidence-based decision making.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Analytics, Data & Research">Apply</button>
+    </div>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Business Operations</div>
+        <div class="career-desc">Optimize internal processes and support the seamless delivery of client solutions.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Business Operations">Apply</button>
+    </div>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Marketing</div>
+        <div class="career-desc">Drive brand growth and engagement through creative campaigns and strategic communications.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Marketing">Apply</button>
+    </div>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Human Resources</div>
+        <div class="career-desc">Shape our culture and support our people through talent acquisition, development, and engagement.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Human Resources">Apply</button>
+    </div>
+    <div class="career-card">
+      <div class="career-info">
+        <div class="career-title">Product Management</div>
+        <div class="career-desc">Lead the development and delivery of innovative products that solve real business challenges.</div>
+      </div>
+      <button class="btn btn-neon-green apply-btn" data-career="Product Management">Apply</button>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="applicationForm" enctype="multipart/form-data">
+          <div class="modal-header">
+            <h5 class="modal-title" id="applyModalLabel">Apply for <span id="modalCareerTitle"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="applicantName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="applicantName" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="applicantEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="applicantEmail" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="applicantCV" class="form-label">Upload CV</label>
+              <input type="file" class="form-control" id="applicantCV" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="mb-3">
+              <label for="coverLetter" class="form-label">Cover Letter</label>
+              <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="linkedin" class="form-label">LinkedIn Profile (optional)</label>
+              <input type="url" class="form-control" id="linkedin" name="linkedin">
+            </div>
+            <input type="hidden" id="careerField" name="career">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-neon-green">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>JMC Group</h5>
+          <p>Delivering exceptional consulting services worldwide.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="footer-links mb-3">
+            <a href="contact.html" class="text-light me-3" style="text-decoration:none;">Contact</a>
+            <a href="subscribe.html" class="text-light" style="text-decoration:none;">Subscribe</a>
+          </div>
+          <p>&copy; 2025 JMC Group. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Open modal and set career title
+    document.querySelectorAll('.apply-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.getElementById('modalCareerTitle').textContent = this.getAttribute('data-career');
+        document.getElementById('careerField').value = this.getAttribute('data-career');
+        const modal = new bootstrap.Modal(document.getElementById('applyModal'));
+        modal.show();
+      });
+    });
+    // Optionally handle form submission here
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // You can add AJAX or backend integration here
+      alert('Application submitted!');
+      bootstrap.Modal.getInstance(document.getElementById('applyModal')).hide();
+      this.reset();
+    });
+  </script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html> 

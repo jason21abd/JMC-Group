@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .offices-dropdown {
+      min-width: 250px;
+      padding: 0.5rem 0;
+      /* display: block; */
+    }
+    .offices-dropdown .dropdown-header {
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      color: #18181a;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 0.5rem;
+    }
+    .region-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #7c3aed;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.25rem 1rem;
+      margin-bottom: 0.25rem;
+      margin-top: 0.5rem;
+    }
+    .offices-dropdown .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: #18181a;
+      transition: background-color 0.2s;
+    }
+    .offices-dropdown .dropdown-item:hover {
+      background-color: #f4f4f7;
+      color: #7c3aed;
+    }
+    .offices-dropdown .dropdown-divider {
+      margin: 0.5rem 0;
+      border-color: #e5e7eb;
+    }
+    @media (min-width: 992px) {
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .dropdown-menu {
+        pointer-events: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg top-navbar bg-light">
+    <div class="container">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <!-- Offices dropdown removed, replaced with direct link -->
+          <a class="nav-link" href="offices.html">Offices</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html> 

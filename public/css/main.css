@@ -1,0 +1,229 @@
+/* main.css - General Styles and Color Palette */
+:root {
+  --primary-green: #61892F; /* Deep Green */
+  --accent-lime: #86C232; /* Lime Green (logo, name, buttons) */
+  --background-dark: #222629; /* Dark Gray background */
+  --gray-medium: #474B47; /* Medium Gray */
+  --gray-light: #6B6E70; /* Light Gray */
+  --accent-white: #fff;
+  --text-main: #fff;
+  --text-dark: #222629;
+  --font-main: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  background: var(--background-dark);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-lime);
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent-lime);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--primary-green);
+}
+
+.btn-primary {
+  background: var(--accent-lime);
+  border: none;
+  color: var(--background-dark);
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: var(--primary-green);
+  color: var(--accent-white);
+}
+
+.btn-outline-primary {
+  color: var(--accent-lime);
+  border-color: var(--accent-lime);
+}
+.btn-outline-primary:hover {
+  background: var(--accent-lime);
+  color: var(--background-dark);
+}
+
+.bg-dark {
+  background: var(--background-dark) !important;
+}
+.bg-light {
+  background: var(--gray-light) !important;
+}
+
+.text-primary {
+  color: var(--accent-lime) !important;
+}
+
+/* Utility classes */
+.hero-image-placeholder, .about-image-placeholder, .industry-image, .service-image {
+  background: var(--gray-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card hover 3D effect */
+.service-card, .benefit-card, .value-card, .team-card, .industry-image, .service-image {
+  transition: transform 0.25s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.25s;
+  box-shadow: 0 2px 8px rgba(97,137,47,0.06);
+}
+.service-card:hover, .benefit-card:hover, .value-card:hover, .team-card:hover, .industry-image:hover, .service-image:hover {
+  transform: scale(1.04); /* Only scale, no tilt */
+  box-shadow: 0 8px 32px rgba(134,194,50,0.15);
+  z-index: 2;
+}
+
+/* Service photo pop-out effect, no frame */
+.service-photo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.25s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.25s;
+  margin: 0 auto;
+}
+/* Consistent size for leadership team photos */
+.team-avatar img.service-photo {
+  max-width: 180px;
+}
+.service-photo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(134,194,50,0.18);
+}
+
+.team-card {
+  width: 100%;
+  max-width: 340px;
+  height: 420px;
+  margin: 0 auto 2rem auto;
+  background: var(--gray-light);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+/* Neon green button for Apply (Careers) */
+.btn-neon-green {
+  background-color: #86c232 !important;
+  border: none !important;
+  color: var(--background-dark) !important;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-neon-green:hover, .btn-neon-green:focus {
+  background-color: #61892F !important;
+  color: #fff !important;
+}
+.btn.btn-neon-green {
+  background-color: #86c232 !important;
+  border: none !important;
+  color: var(--background-dark) !important;
+}
+.btn.btn-neon-green:hover, .btn.btn-neon-green:focus {
+  background-color: #61892F !important;
+  color: #fff !important;
+}
+
+.office-contact-block {
+  background: rgba(34, 38, 41, 0.85); /* semi-transparent dark */
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0 2rem 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  max-width: 420px;
+  font-size: 1.1rem;
+}
+.office-contact-block h2 {
+  color: #86C232;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 700px) {
+  .office-contact-block {
+    padding: 1rem;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+.office-contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 1.5rem;
+  z-index: 2;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.office-partners {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.partner-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 140px;
+}
+.partner-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #86C232;
+  box-shadow: 0 2px 8px rgba(97,137,47,0.10);
+  margin-bottom: 0.7rem;
+  background: #222629;
+}
+.partner-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08rem;
+  text-align: center;
+}
+.partner-title {
+  color: #86C232;
+  font-size: 0.98rem;
+  font-weight: 400;
+  margin-top: 0.1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 700px) {
+  .office-partners {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .partner-profile {
+    max-width: 100%;
+  }
+} 
